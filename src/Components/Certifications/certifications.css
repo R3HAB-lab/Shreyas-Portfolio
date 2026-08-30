@@ -1,0 +1,101 @@
+/* --- Certifications Container --- */
+.certifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 80px 0;
+  padding: 0 20px;
+}
+
+/* --- Section Title --- */
+.certifications-title {
+  position: relative;
+  text-align: center;
+}
+
+.certifications-title h1 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.certifications-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  max-width: 140px;
+}
+
+/* --- Grid Layout --- */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* --- Certification Cards (Interactive Link) --- */
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  background: #161619;
+  border: 1px solid #2a2a2e;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff00ff; /* Primary accent matching your portfolio */
+  box-shadow: 0 10px 20px rgba(255, 0, 255, 0.15);
+}
+
+/* --- Card Content --- */
+.cert-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.cert-info p {
+  font-size: 14px;
+  color: #a0a0a0;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* --- Action Callout --- */
+.cert-link-icon {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff00ff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.cert-card:hover .cert-link-icon {
+  gap: 12px; /* Subtle arrow expansion on hover */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .certifications-title h1 {
+    font-size: 35px;
+  }
+
+  .certifications-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,189 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 10%;
+  color: #fff;
+}
+
+/* ---------- Title ---------- */
+
+.contact-title h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ---------- Main Layout ---------- */
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 80px;
+}
+
+/* ---------- Left Section ---------- */
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+}
+
+.contact-left h1 {
+  font-size: 45px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #df8908, #b415ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d8d8d8;
+  max-width: 500px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Individual Contact Item */
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  color: #d8d8d8;
+  transition: transform 0.3s ease;
+}
+
+.contact-detail:hover {
+  transform: translateX(8px);
+}
+
+.contact-detail img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Email / LinkedIn Link Styling */
+
+.contact-detail a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+.contact-detail a:hover {
+  color: #b415ff;
+}
+
+/* ---------- Right Section ---------- */
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+
+.contact-right label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #32323c;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+  color: #a0a0a0;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border: 1px solid #b415ff;
+  box-shadow: 0 0 10px rgba(180, 21, 255, 0.3);
+}
+
+.contact-right textarea {
+  resize: none;
+}
+
+/* ---------- Submit Button ---------- */
+
+.contact-submit {
+  width: fit-content;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #df8908, #b415ff);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(180, 21, 255, 0.4);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .contact {
+    margin: 60px 6%;
+    gap: 50px;
+  }
+
+  .contact-title h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contact-left h1 {
+    font-size: 34px;
+  }
+
+  .contact-left p,
+  .contact-detail,
+  .contact-detail a,
+  .contact-right label {
+    font-size: 16px;
+  }
+
+  .contact-submit {
+    width: 100%;
+    text-align: center;
+  }
+}

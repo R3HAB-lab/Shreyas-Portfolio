@@ -1,0 +1,178 @@
+/* Container & Title Styles */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: #0f1013;
+  color: #ffffff;
+}
+
+.about-title {
+  position: relative;
+  text-align: center;
+}
+
+.about-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* Two-Column Layout */
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Paragraph on the Left */
+.about-para {
+  flex: 1;
+}
+
+.about-para p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* Skills Image on the Right */
+.about-skills {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+/* --- Vertical Timeline Container --- */
+.about-experience {
+  margin-top: 60px;
+}
+
+.experience-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Timeline vertical baseline */
+.experience-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px; /* Space for line and nodes */
+  border-left: 2px solid #333; /* Vertical connecting line */
+}
+
+/* --- Timeline Items & Cards --- */
+.experience-card {
+  position: relative;
+  margin-bottom: 35px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background: #161619; /* Adjust background matching your theme */
+  border: 1px solid #2a2a2e;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Accent timeline node (dot) attached to the left line */
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -37px; /* Aligns dot directly over the vertical line */
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff00ff; /* Primary accent color */
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.experience-card:hover {
+  transform: translateX(5px);
+  border-color: #ff00ff;
+}
+
+/* --- Card Content Formatting --- */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.experience-duration {
+  font-size: 14px;
+  color: #a0a0a0;
+  font-weight: 500;
+}
+
+.experience-company {
+  font-size: 15px;
+  font-weight: 500;
+  color: #d4d4d4;
+  margin: 6px 0 12px 0;
+}
+
+.experience-desc {
+  font-size: 14px;
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .experience-container {
+    padding-left: 20px;
+  }
+
+  .experience-card::before {
+    left: -27px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,239 @@
+/* ==========================================
+   PROJECTS SECTION LAYOUT
+   ========================================== */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 80px 0;
+  padding: 0 20px;
+}
+
+/* --- Section Title --- */
+.projects-title {
+  position: relative;
+  text-align: center;
+}
+
+.projects-title h1 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.projects-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  max-width: 140px;
+}
+
+/* --- Grid Container --- */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ==========================================
+   PROJECT CARDS
+   ========================================== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #161619;
+  border: 1px solid #2a2a2e;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff00ff;
+  box-shadow: 0 12px 24px rgba(255, 0, 255, 0.15);
+}
+
+/* --- Card Headers & Subtitles --- */
+.project-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.project-subtitle {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ff00ff;
+  margin-bottom: 15px;
+}
+
+/* --- Technology Tag Chips --- */
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tech-tag {
+  background: #222226;
+  color: #d4d4d4;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #333338;
+}
+
+/* --- Project Description --- */
+.project-desc {
+  font-size: 14px;
+  color: #b3b3b3;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ==========================================
+   BUTTONS & ACTIONS
+   ========================================== */
+.project-play-btn {
+  align-self: flex-start;
+  background: transparent;
+  color: #ff00ff;
+  border: 1px solid #ff00ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.project-play-btn:hover {
+  background: #ff00ff;
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+.project-no-link {
+  font-size: 13px;
+  color: #77777c;
+  font-style: italic;
+  align-self: flex-start;
+}
+
+/* ==========================================
+   INTERACTIVE GAME MODAL OVERLAY
+   ========================================== */
+.game-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.game-modal-content {
+  background: #161619;
+  border: 1px solid #333;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 960px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  animation: scaleUp 0.2s ease-in-out;
+}
+
+.game-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.game-modal-header h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.game-modal-close {
+  background: transparent;
+  border: none;
+  color: #aaaaaa;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.game-modal-close:hover {
+  color: #ff00ff;
+}
+
+/* --- 16:9 Unity WebGL Container --- */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000000;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==========================================
+   ANIMATIONS & MEDIA QUERIES
+   ========================================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .projects-title h1 {
+    font-size: 35px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .game-modal-content {
+    padding: 16px;
+  }
+
+  .game-modal-header h2 {
+    font-size: 18px;
+  }
+}

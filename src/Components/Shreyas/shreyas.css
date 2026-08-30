@@ -1,0 +1,65 @@
+.shreyas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+.shreyas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+
+    /* Push content below fixed navbar */
+    padding-top: 140px;
+}
+.shreyas h1{
+    text-align: center;
+    width: 70%;
+    font-size: 90px;
+    font-weight: 600;
+}
+.shreyas h1 span {
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.shreyas p{
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+.shreyas-action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.shreyas-connect{
+    padding: 25px 45px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+    cursor: pointer;
+}
+.shreyas-resume{
+    padding: 25px 45px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+.shreyas-connect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(180, 21, 255, 0.5);
+}
+
+/* Resume Button Hover */
+.shreyas-resume:hover {
+    transform: scale(1.05);
+    background: #FFF;
+    color: #161513;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
