@@ -16,7 +16,7 @@ const Shreyas = () => {
         <span>I am Shreyas Manjunath,</span> Software Engineer based in India.
       </h1>
 
-      <p>I am a software engineer with 2 years of experience.</p>
+      <p>Problem solver. Lifelong learner.</p>
 
       <div className="shreyas-action">
         <div className="shreyas-connect" onClick={scrollToContact}>
