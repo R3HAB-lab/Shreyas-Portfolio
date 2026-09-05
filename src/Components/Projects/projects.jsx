@@ -30,6 +30,13 @@ const Projects = () => {
       description: "Survive. Clear the Wave. Become the ultimate Space Defender. Repeat.",
       playLink: "https://play.unity.com/api/v1/games/game/b78438c0-9f97-407c-b90d-da6ae8ee2bb1/build/latest/frame",
       githubLink: null
+    },
+    {
+      title: "MacroTracker",
+      subtitle: "Nutrition Tracking App",
+      tech: ["React", "JavaScript", "Vite", "Codex"],
+      description: "A meal-tracking application for monitoring daily macro goals and calories intake.",
+      liveLink: "https://macro-tracker-olive.vercel.app/"
     }
   ];
 
@@ -66,7 +73,7 @@ const Projects = () => {
               <p className="project-desc">{project.description}</p>
             </div>
 
-            {/* If it has a playLink, show Click to Play button; if githubLink, show GitHub Repository link */}
+            {/* Show the relevant project action. */}
             {project.playLink ? (
               <button 
                 onClick={() => openGameModal(project)}
@@ -74,6 +81,16 @@ const Projects = () => {
               >
                 Click to play &rarr;
               </button>
+            ) : project.liveLink ? (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-play-btn"
+                style={{ textAlign: 'center', textDecoration: 'none', display: 'inline-block' }}
+              >
+                Visit Website &rarr;
+              </a>
             ) : project.githubLink ? (
               <a 
                 href={project.githubLink}
