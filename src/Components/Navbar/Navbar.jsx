@@ -65,11 +65,7 @@ const Navbar = () => {
         <li onClick={() => scrollToSection("contact")}>Contact</li>
       </ul>
 
-      <a 
-        href="/Resume%202026.pdf" 
-        download="Resume_2026.pdf" 
-        className="nav-connect"
-      >
+     <a href="/Resume_2026.pdf" download="Resume_2026.pdf" className="nav-connect" >
         Download Resume
       </a>
     </div>
